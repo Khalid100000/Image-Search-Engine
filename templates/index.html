@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    </head>
+
+    <body>
+
+        <div class="container center_div">
+          <div class="span4">
+            <img class="center-block" width=500 src="{{url_for('static',filename = 'Images/logo3.png')}}">
+          </div>
+
+          </h1>
+
+            <h2 class="text-center" >
+
+              <b>IMAGE SEARCH ENGINE</b></h2>
+              <h2 class="text-center"><i>BY:</i>
+              </h2>
+              <h2 class="text-center"><small>Khalid Alabyad and Moaaz Elsaeed.</small>
+              </h2>
+              <b>  <br><br><br><br> </b>
+            <dev class="col-md-4 col-md-offset-4"><form method="POST" enctype="multipart/form-data">
+                <input type="file" name="query_img">
+                <input type="submit">
+
+            </form>
+
+          </dev>
+          <b>  <br><br><br> </b>
+          <dev>
+            {% if query_path %}
+            <h3>YOUR QUERY:</h3>
+
+            <img src="{{ query_path }}" width="300px">
+
+            <h3>Results:</h3>
+            {% endif %}
+            {% for score in scores %}
+            <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
+                <img src="{{ score[1] }}" height="200px">
+                <figcaption>{{ score[0] }}</figcaption>
+            </figure>
+            {% endfor %}
+          </dev>
+        </div>
+    </body>
+</html>

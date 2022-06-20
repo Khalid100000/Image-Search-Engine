@@ -7,7 +7,6 @@ from pathlib import Path
 import cv2
 
 app = Flask(__name__)
-server=app.server
 # Read image features
 fe = FeatureExtractor()
 features = []

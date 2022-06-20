@@ -10,3 +10,4 @@ Werkzeug==1.0.1
 wincertstore==0.2
 certifi==2021.5.30
 click==7.1.2
+opencv-python-headless==4.2.0.32

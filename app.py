@@ -42,7 +42,3 @@ def index():
         return render_template('index.html',query_path=uploaded_img_path,scores=scores)
     else:
         return render_template('index.html')
-
-
-if __name__=="__main__":
-	app.run()

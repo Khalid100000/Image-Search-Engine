@@ -18,7 +18,7 @@ for feature_path in Path("./static/feature").glob("*.npy"):
 #features = np.array(features)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/hello', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         file = request.files['query_img']
@@ -42,3 +42,4 @@ def index():
         return render_template('index.html',query_path=uploaded_img_path,scores=scores)
     else:
         return render_template('index.html')
+
